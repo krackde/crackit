@@ -9,7 +9,7 @@ export default function Home() {
       <section className="mb-12">
         <h1 className="text-4xl font-bold mb-4 text-white">안녕하세요 👋</h1>
         <p className="text-zinc-400 text-lg leading-relaxed">
-          개발, CS, 알고리즘을 공부하고 기록하는 테크 블로그입니다.
+          DevSecOps, 보안 개념, 최신 보안 뉴스를 공부하고 기록하는 블로그입니다.
         </p>
       </section>
       <section>

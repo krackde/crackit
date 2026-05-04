@@ -1,9 +1,9 @@
 ---
-title: "이진 탐색(Binary Search) 완벽 정리"
+title: "CTF 포렌식: Binary Exploitation 기초"
 date: "2026-05-02"
-description: "이진 탐색의 원리부터 다양한 변형 문제 풀이 패턴까지 정리합니다."
-category: "algorithm"
-tags: ["이진탐색", "알고리즘", "Python"]
+description: "CTF에서 자주 나오는 Binary Exploitation 유형 문제와 풀이 전략을 정리합니다."
+category: "ctf"
+tags: ["CTF", "pwn", "Binary Exploitation"]
 ---
 
 ## 이진 탐색이란?

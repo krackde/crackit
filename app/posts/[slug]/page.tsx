@@ -12,7 +12,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   return (
     <div>
-      <Link href="/crackit/posts" className="text-sm text-zinc-500 hover:text-indigo-400 transition-colors mb-8 inline-block">
+      <Link href="/posts" className="text-sm text-zinc-500 hover:text-indigo-400 transition-colors mb-8 inline-block">
         ← 목록으로
       </Link>
       <article>

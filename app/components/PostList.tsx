@@ -48,7 +48,7 @@ export default function PostList({ posts }: { posts: PostMeta[] }) {
       <ul className="space-y-4">
         {filtered.map((post) => (
           <li key={post.slug}>
-            <Link href={`/crackit/posts/${post.slug}`} className="group block">
+              <Link href={`/posts/${post.slug}`} className="group block">
               <article className="border border-zinc-800 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-zinc-900 transition-all">
                 <div className="flex items-center justify-between mb-1">
                   <time className="text-xs text-zinc-500">{post.date}</time>

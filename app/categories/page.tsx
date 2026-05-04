@@ -11,7 +11,7 @@ export default function CategoriesPage() {
       <p className="text-zinc-400 mb-10">주제별로 포스트를 모아봤습니다.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {(Object.keys(CATEGORIES) as (keyof typeof CATEGORIES)[]).map((key) => (
-          <Link key={key} href={`/crackit/categories/${key}`} className="group">
+          <Link key={key} href={`/categories/${key}`} className="group">
             <div className="border border-zinc-800 rounded-xl p-6 hover:border-indigo-500/50 hover:bg-zinc-900 transition-all">
               <div className="text-3xl mb-3">{CATEGORY_ICONS[key]}</div>
               <h2 className="text-lg font-semibold text-white group-hover:text-indigo-400 transition-colors">

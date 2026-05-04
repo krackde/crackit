@@ -23,7 +23,7 @@ export default async function CategoryPage({
   return (
     <div>
       <Link
-        href="/crackit/categories"
+        href="/categories"
         className="text-sm text-zinc-500 hover:text-indigo-400 transition-colors mb-8 inline-block"
       >
         ← 카테고리 목록
@@ -37,7 +37,7 @@ export default async function CategoryPage({
         <ul className="space-y-6">
           {posts.map((post) => (
             <li key={post.slug}>
-              <Link href={`/crackit/posts/${post.slug}`} className="group block">
+                <Link href={`/posts/${post.slug}`} className="group block">
                 <article className="border border-zinc-800 rounded-xl p-5 hover:border-indigo-500/50 hover:bg-zinc-900 transition-all">
                   <time className="text-xs text-zinc-500">{post.date}</time>
                   <h2 className="mt-1 text-lg font-semibold text-white group-hover:text-indigo-400 transition-colors">

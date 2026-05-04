@@ -20,13 +20,13 @@ export default function RootLayout({
       <body className={`${geist.className} bg-zinc-950 text-zinc-100 min-h-screen`}>
         <header className="border-b border-zinc-800">
           <div className="max-w-3xl mx-auto px-4 py-5 flex items-center justify-between">
-            <Link href="/crackit" className="text-xl font-bold tracking-tight text-white hover:text-indigo-400 transition-colors">
+            <Link href="/" className="text-xl font-bold tracking-tight text-white hover:text-indigo-400 transition-colors">
               crackit
             </Link>
             <nav className="flex gap-6 text-sm text-zinc-400">
-              <Link href="/crackit" className="hover:text-white transition-colors">홈</Link>
-              <Link href="/crackit/categories" className="hover:text-white transition-colors">카테고리</Link>
-              <Link href="/crackit/posts" className="hover:text-white transition-colors">전체글</Link>
+              <Link href="/" className="hover:text-white transition-colors">홈</Link>
+              <Link href="/categories" className="hover:text-white transition-colors">카테고리</Link>
+              <Link href="/posts" className="hover:text-white transition-colors">전체글</Link>
             </nav>
           </div>
         </header>

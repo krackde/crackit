@@ -3,6 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { CATEGORIES, type CategoryKey } from "./categories";
+export type { CategoryKey } from "./categories";
+export { CATEGORIES } from "./categories";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -12,6 +15,7 @@ export interface PostMeta {
   date: string;
   description: string;
   tags?: string[];
+  category?: CategoryKey;
 }
 
 export interface Post extends PostMeta {
@@ -34,6 +38,7 @@ export function getSortedPostsData(): PostMeta[] {
         date: data.date ?? "",
         description: data.description ?? "",
         tags: data.tags ?? [],
+        category: data.category ?? undefined,
       } as PostMeta;
     });
 
@@ -46,6 +51,19 @@ export function getAllPostSlugs() {
     .readdirSync(postsDirectory)
     .filter((f) => f.endsWith(".md"))
     .map((fileName) => fileName.replace(/\.md$/, ""));
+}
+
+export function getPostsByCategory(category: CategoryKey): PostMeta[] {
+  return getSortedPostsData().filter((post) => post.category === category);
+}
+
+export function getCategoryStats(): Record<CategoryKey, number> {
+  const posts = getSortedPostsData();
+  const stats = {} as Record<CategoryKey, number>;
+  for (const key of Object.keys(CATEGORIES) as CategoryKey[]) {
+    stats[key] = posts.filter((p) => p.category === key).length;
+  }
+  return stats;
 }
 
 export async function getPostData(slug: string): Promise<Post> {
@@ -62,6 +80,7 @@ export async function getPostData(slug: string): Promise<Post> {
     date: data.date ?? "",
     description: data.description ?? "",
     tags: data.tags ?? [],
+    category: data.category ?? undefined,
     contentHtml,
   };
 }

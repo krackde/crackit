@@ -1,8 +1,9 @@
 ---
 title: "블로그를 시작합니다"
 date: "2026-05-04"
-description: "안녕하세요! crackit 블로그의 첫 번째 포스트입니다."
-tags: ["일상", "블로그"]
+description: "안녕하세요! crackit 테크 블로그의 첫 번째 포스트입니다."
+category: "retrospect"
+tags: ["회고", "블로그"]
 ---
 
 ## 안녕하세요 👋

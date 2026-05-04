@@ -25,7 +25,8 @@ export default function RootLayout({
             </Link>
             <nav className="flex gap-6 text-sm text-zinc-400">
               <Link href="/crackit" className="hover:text-white transition-colors">홈</Link>
-              <Link href="/crackit/posts" className="hover:text-white transition-colors">포스트</Link>
+              <Link href="/crackit/categories" className="hover:text-white transition-colors">카테고리</Link>
+              <Link href="/crackit/posts" className="hover:text-white transition-colors">전체글</Link>
             </nav>
           </div>
         </header>
